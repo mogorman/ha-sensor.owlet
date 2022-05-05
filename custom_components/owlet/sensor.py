@@ -344,6 +344,7 @@ class OwletSmartSock(Entity):
         if self.__state == "Disconnected":
             self.__Owlet.authenticate(True)
         state = self.__Owlet.vitals(self.__DSN)
+        _LOGGER.error("MOG Sock %s" % (state))
         if state["error"] != False:
             self.__state = "Disconnected"
             self.__attributes["dsn"] = None
