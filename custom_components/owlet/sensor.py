@@ -231,6 +231,7 @@ class OwletAPI:
 
     def vitals(self, dsn):
         p, timestamp = self.sock_properties(dsn)
+        _LOGGER.error("Owlet Network error while retrieving data for Sock %s" % (p))
         if p is not False:
             if "REAL_TIME_VITALS" in p:
                 # Sock is a Smart Sock 3
