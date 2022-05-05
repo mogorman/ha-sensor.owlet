@@ -341,6 +341,7 @@ class OwletSmartSock(Entity):
 
     def update(self):
         """Fetch latest vital signs from the Owlet API"""
+        _LOGGER.error("MOG I WAS CALLED")
         if self.__state == "Disconnected":
             self.__Owlet.authenticate(True)
         state = self.__Owlet.vitals(self.__DSN)
