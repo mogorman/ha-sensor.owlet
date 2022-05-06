@@ -24,8 +24,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
     }
 )
 
-_LOGGER = logging.getLogger(__name__)
-
+_LOGGER: logging.Logger = logging.getLogger(__package__)
 
 class OwletAPI:
     def __init__(self, config):
